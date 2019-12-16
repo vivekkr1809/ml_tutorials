@@ -1,3 +1,6 @@
+# Avoid results and data folders
+results/
+data/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
