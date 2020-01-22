@@ -62,11 +62,7 @@ def using_meanav_as_features(model_input):
   # Read the features
   features_data = pd.read_csv(model_input["data_files"]["feature_file"], header=None)
   features_data = features_data.to_numpy()
-  # print(features_data)
-  # print(features_data.std(axis=0))
-  # print(features_data.mean(axis=0))
-  # plt.plot(features_data.std(axis=0)/features_data.mean(axis=0))
-  # plt.show()
+
   # Read the target data
   target_data = pd.read_csv(model_input["data_files"]["target_file"])
   # Loop over all the physical properties to predict
@@ -84,7 +80,7 @@ def using_meanav_as_features(model_input):
 def main():
   model_input = ParseDataJSON('model_input.json')
   model_input.parse_data()
-  # using_mia_as_features()
+  
   using_meanav_as_features(model_input.data_dict["meanav"])
   return 0
 

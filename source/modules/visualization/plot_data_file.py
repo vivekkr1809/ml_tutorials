@@ -29,11 +29,9 @@ class PlotNumpyData2D():
 
   def plot(self):
     self.check_shape()
-    if self.decoration_file is None:
-      markers_to_use = ["o", "*", "X", "s", "p", "P", "H", "D", "v", "^", "<", ">", "8"]
-      colors_to_use = ["xkcd:purple", "xkcd:green", "xkcd:blue", "xkcd:pink", "xkcd:brown", "xkcd:red", "xkcd:orange", "xkcd:magenta", "xkcd:brick"]
-    # Parse the plot information
-    self.parsed_plot_information.parse_data()
+    markers_to_use = ["o", "*", "X", "s", "p", "P", "H", "D", "v", "^", "<", ">", "8"]
+    colors_to_use = ["xkcd:purple", "xkcd:green", "xkcd:blue", "xkcd:pink", "xkcd:brown", "xkcd:red", "xkcd:orange", "xkcd:magenta", "xkcd:brick"]
+    
     fig, ax = plt.subplots(figsize=(12, 9))
     plt.grid(True)
     plt.rc('font', size=20)

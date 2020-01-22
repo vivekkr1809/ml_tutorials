@@ -1,0 +1,58 @@
+{
+	"mia" :{	
+		"data_files":
+			{"feature_file" : "../data/initial/training_data_MIA.csv",
+			 "target_file" : "../data/initial/gpr_data_key.csv",
+			 "physical_property" : ["Density", "F'c", "Porosity"]
+			},
+		"feature_vs_label_plot_information":
+			{"features_vs_labels_plot_output_dir" : "../results/features_vs_labels/mia/",
+			 "PlotTitle": "MIA features vs properties surface plot",
+			 "XaxisLabel": "Real Values",
+			 "YaxisLabel": "Imaginary Values",
+			 "ZaxisLabel": "Density"
+			}
+		},
+	"meanav":{	
+		"data_files":
+			{"feature_file" : "../data/initial/training_data_meanav.csv",
+			 "target_file" : "../data/initial/gpr_data_key.csv",
+			 "physical_property" : ["Density", "F'c", "Porosity"]
+			},
+		"feature_vs_label_plot_information":
+			{"features_vs_labels_plot_output_dir" : "../results/features_vs_labels/meanav/",
+			 "PlotTitle": "Features vs properties plot",
+			 "XaxisLabel": "Feature Number",
+			 "DensityLabel": "Density ($\\frac{kg}{m^3}$)",
+			 "PorosityLabel": "Porosity",
+			 "CompressiveLabel": "Compressive Strength (MPa)"
+			},
+		"density_data_transform":
+			{
+			 "combined_train_file" : "../data/processed/train_density_transformed.csv",
+			 "combined_test_file" : "../data/processed/test_density_transformed.csv"
+			},
+		"compressive_data_transform":
+			{
+			 "combined_train_file" : "../data/processed/train_compressive_strength_transformed.csv",
+			 "combined_test_file" : "../data/processed/test_compressive_strength_transformed.csv"
+			},
+		"porosity_data_transform":
+			{
+			 "combined_train_file" : "../data/processed/train_porosity_transformed.csv",
+			 "combined_test_file" : "../data/processed/train_porosity_transformed.csv"
+			}
+		},
+	"predicted_vs_true_plot_info":
+		{
+		 "marker": "o",
+		 "color": "red",
+		 "y_is_x_line": true,
+		 "PlotTitle": "Actual vs predicted value of",
+		 "XaxisLabel": "Actual",
+		 "YaxisLabel": "Predicted",
+		 "LabelInfo": "r$^{2}$ value"
+		}
+
+}
+
